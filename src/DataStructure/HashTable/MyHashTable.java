@@ -1,4 +1,4 @@
-package HashTable;
+package DataStructure.HashTable;
 
 import java.util.LinkedList;
 

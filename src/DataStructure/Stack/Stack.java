@@ -1,4 +1,4 @@
-package StackQueue;
+package DataStructure.Stack;
 
 public class Stack {
 	private SinglyLinkedList list;
@@ -70,5 +70,3 @@ public class Stack {
 	}
 
 }
-
-

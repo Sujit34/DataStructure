@@ -1,4 +1,4 @@
-package StackQueue;
+package DataStructure.Stack;
 
 public class NodeStack {
 	private Node top = null;

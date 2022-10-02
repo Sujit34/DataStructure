@@ -1,4 +1,4 @@
-package StackQueue;
+package DataStructure.Queue;
 
 public class NodeQueue {
 	private Node front=null;

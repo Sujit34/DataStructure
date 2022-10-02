@@ -1,4 +1,4 @@
-package LinkedList;
+package DataStructure.LinkedList;
 
 //addFirst
 //addLast
@@ -115,7 +115,7 @@ public class SinglyLinkedListWithHeader {
 			temp = temp.next;
 		}
 	}
-    
+  
 	void printNodes() {
 		Node temp = header.next;
 		while(temp!=null) {
@@ -157,3 +157,4 @@ public class SinglyLinkedListWithHeader {
 	}
 
 }
+
