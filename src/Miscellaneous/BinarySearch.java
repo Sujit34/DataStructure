@@ -38,7 +38,7 @@ public class BinarySearch {
 	}
 
 	public static void main(String[] args) {
-		int arr[] = { -1, 0, 3, 5, 9, 12 };
+		int arr[] = { -1, 0, 3, 5, 9, 10 };
 		System.out.println(recursiveBinarySearch(arr, 0, arr.length - 1, 12));
 		System.out.println(iterativeBinarySearch(arr, 12));
 	}
