@@ -9,6 +9,7 @@ public class ImmutableList {
 		System.out.println(list);
 		List<String> new_list = Collections.unmodifiableList(list);
 		list.add("GHI");
+		list = Collections.unmodifiableList(list);
 		System.out.println(list);
 		System.out.println(new_list);		
 	}
