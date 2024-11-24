@@ -1,0 +1,17 @@
+https://www.digitalocean.com/community/tutorials/abstract-factory-design-pattern-in-java
+
+Abstract Factory Pattern
+-------------------------
+The abstract factory pattern is similar to the factory pattern and is a factory of factories. 
+If you are familiar with the factory design pattern in Java, you will notice that we have a 
+single factory class that returns the different subclasses based on the input provided and the 
+factory class uses if-else or switch statements to achieve this. In the abstract factory pattern, 
+we get rid of if-else block and have a factory class for each subclass and then an abstract factory 
+class that will return the subclass based on the input factory class.
+
+Abstract Factory Design Pattern Advantages
+------------------------------------------
+Abstract Factory design pattern provides approach to code for interface rather than implementation.
+Abstract Factory pattern is “factory of factories” and can be easily extended to accommodate more 
+products, for example we can add another sub-class Laptop and a factory LaptopFactory.
+Abstract Factory pattern is robust and avoid conditional logic of Factory pattern.

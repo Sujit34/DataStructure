@@ -1,0 +1,52 @@
+https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples
+Singleton Pattern
+------------------
+The singleton pattern restricts the instantiation of a Class and ensures that only one 
+instance of the class exists in the Java Virtual Machine. The implementation of the singleton 
+pattern has always been a controversial topic among developers.
+
+Singleton Pattern Principles
+-----------------------------
+1. Singleton pattern restricts the instantiation of a class and ensures that only one instance 
+   of the class exists in the Java Virtual Machine.
+2. The singleton class must provide a global access point to get the instance of the class.
+3. Singleton pattern is used for logging, drivers objects, caching, and thread pool.
+4. Singleton design pattern is also used in other design patterns like Abstract Factory, Builder, 
+   Prototype, Facade, etc.
+5. Singleton design pattern is used in core Java classes also (for example, java.lang.Runtime, 
+   java.awt.Desktop).
+
+
+1. Eager initialization
+-------------------------
+In eager initialization, the instance of the singleton class is created at the time of class loading. 
+The drawback to eager initialization is that the method is created even though the client application 
+might not be using it.
+
+2. Static block initialization
+-------------------------------
+Static block initialization implementation is similar to eager initialization, except that instance of
+the class is created in the static block that provides the option for exception handling. Both eager 
+initialization and static block initialization create the instance even before it’s being used and 
+that is not the best practice to use.
+
+3. Lazy Initialization
+----------------------
+Lazy initialization method to implement the singleton pattern creates the instance in the global 
+access method. The preceding implementation works fine in the case of the single-threaded environment, 
+but when it comes to multi-threaded systems, it can cause issues if multiple threads are inside the 
+if condition at the same time. It will destroy the singleton pattern and both threads will get 
+different instances of the singleton class.
+
+
+4. Thread Safe Singleton
+-------------------------
+A simple way to create a thread-safe singleton class is to make the global access method synchronized 
+so that only one thread can execute this method at a time. The preceding implementation works fine and 
+provides thread-safety, but it reduces the performance because of the cost associated with the 
+synchronized method, although we need it only for the first few threads that might create separate 
+instances. To avoid this extra overhead every time, double-checked locking principle is used. In this 
+approach, the synchronized block is used inside the if condition with an additional check to ensure 
+that only one instance of a singleton class is created. 
+
+
