@@ -160,7 +160,6 @@ public class Practice {
 		
 		String longestString = strings.stream()
 				.max(Comparator.comparingInt(s->s.length())).toString();
-		
 	}
 	
 	/*Calculate the average age of a list of Person objects using Java streams*/
@@ -253,6 +252,37 @@ public class Practice {
 		List<Integer> oddPartition = partioned.get(false);
 	}
 	
-	
 
+	/* Implement a method to calculate the Fibonacci sequence using Java streams*/
+	public static void Fibonacci(){
+		Stream.iterate(new long[]{0, 1}, fib -> new long[]{fib[1], fib[0] + fib[1]})
+				.limit(20)
+				.map(fib -> fib[0])
+				.forEach(System.out::println);
+	}
+
+
+
+
+
+	/* Count the occurrences of each number*/
+	public static void occurrencesOfEachNumber(){
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 2, 4, 5, 6, 4, 7, 8, 9, 9);
+		Map<Integer, Long> frequencyMap = numbers.stream()
+				.collect(Collectors
+						.groupingBy(Function.identity(), Collectors.counting()) //count occurrences and save in a map structure
+				);
+
+	}
+
+	/* Filter out non-duplicate numbers */
+	public static void NonDuplicateNumber(){
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 2, 4, 5, 6, 4, 7, 8, 9, 9);
+		numbers.stream()
+				.collect((Collectors.groupingBy(Function.identity(),Collectors.counting()))) // Count occurrences in Map
+				.entrySet().stream() //convert map entries back to stream
+				.filter(x->x.getValue()>1) // keep the duplicate numbers
+				.map(Map.Entry::getKey) // get the duplicate numbers
+				.collect(Collectors.toList());
+	}
 }
