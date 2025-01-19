@@ -55,7 +55,7 @@ public class Basics {
 				Arrays.asList(7, 8, 9));
 
 		// Nested list into a single list
-		Stream<Integer> flattenedStream = nestedList.stream().flatMap(List::stream);
+		Stream<Integer> flattenedStream = nestedList.stream().flatMap(integers -> integers.stream());
 		flattenedStream.forEach(System.out::println);
 
 		List<String> words = Arrays.asList("Hello", "World", "Java", "Streams");
