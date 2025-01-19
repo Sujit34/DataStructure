@@ -4,7 +4,7 @@ import java.util.*;
 
 public class PracticeTest {
     public static void main(String[] args) {
-        String str = "AABCCCDEEF";
+        String str = "AABCCCDEEFF";
         char[] characters = str.toCharArray();
         boolean[] visited = new boolean[str.length()];
 
